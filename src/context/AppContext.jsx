@@ -1,17 +1,22 @@
 // src/context/AppContext.jsx
+
 import React, { createContext } from "react";
-import { doctorsData } from "../assets/assets";
+// Change 'doctors' to 'doctorsData' to match the export name
+import { doctorsData } from "../assets/assets"; 
 
 export const AppContext = createContext();
 
-const AppContextProvider = ({ children }) => {
+const AppContextProvider = (props) => {
+  const currencySymbol = '$';
   const value = {
-    doctors: doctorsData,
+    // Pass 'doctorsData' as 'doctors' in the context value if you prefer that name
+    doctors: doctorsData, 
+    currencySymbol
   };
 
   return (
     <AppContext.Provider value={value}>
-      {children}
+      {props.children}
     </AppContext.Provider>
   );
 };

@@ -22,6 +22,8 @@ import appointment_img from './appointment_img.png'
 import about_image from './about_image.png'
 import con_img from  './contact_image.png'
 import profile from './profile.png'
+import verified_icon from './verified_icon.svg'
+import info_icon from './info_icon.svg'
 // Exporting all assets as a single object
 export const assets = {
   add_icon,
@@ -46,5 +48,7 @@ export const assets = {
   appointment_img,
   about_image,
   con_img,
-  profile
+  profile,
+  verified_icon,
+  info_icon,
 };
